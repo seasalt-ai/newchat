@@ -116,7 +116,7 @@ const OmnichannelDemo = () => {
     'MailerLite': Zap
   };
 
-  const getChannel = (id) => channels.find(channel => channel.id === id) || channels[0];
+  const getChannel = (id: string) => channels.find(channel => channel.id === id) || channels[0];
   const currentChannel = getChannel(activeChannel);
 
   return (
@@ -210,10 +210,10 @@ const OmnichannelDemo = () => {
                 </div>
 
                 {/* Integration Button */}
-                <button className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                <a href="https://chat.seasalt.ai/gpt/signup" className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                   <span>{t('omnichannelDemo.integrateChannel', 'Integrate')} {currentChannel.name}</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -277,7 +277,7 @@ const OmnichannelDemo = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            {(t('omnichannelDemo.quickSetup.steps', { returnObjects: true }) || []).map((step, index) => (
+            {(t('omnichannelDemo.quickSetup.steps', { returnObjects: true }) as { title: string; description: string; }[] || []).map((step: { title: string; description: string; }, index: number) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold">{index + 1}</span>
