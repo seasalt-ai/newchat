@@ -44,10 +44,8 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-blue-500 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold">S</span>
-              </div>
-              <span className="text-2xl font-bold">SeaChat</span>
+              <img src="/seachat-icon.png" alt="SeaChat Icon" className="w-10 h-10 mr-3" />
+              <img src="/seachat-logo.png" alt="SeaChat Logo" className="h-8" />
             </div>
             
             <p className="text-gray-400 mb-6 leading-relaxed">
