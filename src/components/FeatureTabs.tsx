@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Users, Bot, BookOpen, Zap, Play, Check, Brain, Clock, Search, Database, FileText, Target } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -6,8 +6,20 @@ const FeatureTabs = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('agent-chat');
 
+  // Auto-cycle tabs every 3 seconds
+  useEffect(() => {
+    const tabIds = tabs.map(tab => tab.id);
+    const interval = setInterval(() => {
+      setActiveTab(prev => {
+        const idx = tabIds.indexOf(prev);
+        return tabIds[(idx + 1) % tabIds.length];
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const tabs = [
-    { id: 'agent-chat', label: t('featureTabs.tabs.agentChat'), icon: Users },
+    { id: 'agent-chat', label: t('featureTabs.tabs.humanAgent', 'Human Agent'), icon: Users },
     { id: 'ai-agent', label: t('featureTabs.tabs.aiAgent'), icon: Bot },
     { id: 'advanced-ai', label: t('featureTabs.tabs.advancedAI'), icon: Brain },
     { id: 'knowledge-base', label: t('featureTabs.tabs.knowledgeBase'), icon: BookOpen },
@@ -169,22 +181,7 @@ const FeatureTabs = () => {
             </div>
 
             {/* Demo Section */}
-            <div className="bg-gradient-to-r from-blue-600 to-teal-500 rounded-2xl p-12 text-white text-center">
-              <h3 className="text-3xl font-bold mb-4">{t('featureTabs.content.advancedAI.tryDemo')}</h3>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                See how our next-generation AI features work together to create truly intelligent customer support experiences.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://chat.seasalt.ai/gpt/signup" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-block">
-                  {t('featureTabs.content.advancedAI.tryDemo')}
-                </a>
-                <button className="flex items-center justify-center space-x-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all">
-                  <Play className="w-5 h-5" />
-                  <span>{t('featureTabs.content.advancedAI.watchAI')}</span>
-                </button>
-              </div>
-            </div>
+            {/* Removed Watch Demo and Live Demo Available */}
           </div>
         ) : (
           // Standard Tab Content Layout
@@ -221,13 +218,7 @@ const FeatureTabs = () => {
                    activeTab === 'knowledge-base' ? t('featureTabs.content.knowledgeBase.tryFeature') :
                    t('featureTabs.content.integrations.tryFeature')}
                 </a>
-                <button className="flex items-center justify-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold">
-                  <Play className="w-5 h-5" />
-                  <span>{activeTab === 'agent-chat' ? t('featureTabs.content.agentChat.watchDemo') : 
-                         activeTab === 'ai-agent' ? t('featureTabs.content.aiAgent.watchDemo') :
-                         activeTab === 'knowledge-base' ? t('featureTabs.content.knowledgeBase.watchDemo') :
-                         t('featureTabs.content.integrations.watchDemo')}</span>
-                </button>
+                {/* Removed Watch Demo button */}
               </div>
             </div>
 
@@ -239,13 +230,7 @@ const FeatureTabs = () => {
                   alt={currentContent.title}
                   className="w-full h-80 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <div className="flex items-center space-x-2 text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span>Live Demo Available</span>
-                  </div>
-                </div>
+                {/* Removed Live Demo Available */}
               </div>
             </div>
           </div>
