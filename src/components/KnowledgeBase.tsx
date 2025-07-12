@@ -96,7 +96,11 @@ const KnowledgeBase = () => {
               </div>
               
               <div className="p-6">
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center mb-6 hover:border-teal-400 transition-colors cursor-pointer">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center mb-6 hover:border-teal-400 transition-colors cursor-pointer"
+                  onClick={() => window.open('https://chat.seasalt.ai/gpt/signup', '_blank')}
+                  onDragOver={e => { e.preventDefault(); e.stopPropagation(); }}
+                  onDrop={e => { e.preventDefault(); window.open('https://chat.seasalt.ai/gpt/signup', '_blank'); }}
+                >
                   <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-600 mb-2">{t('knowledgeBase.uploadModal.dropzone.title')}</p>
                   <p className="text-sm text-gray-500">{t('common.learnMore')}</p>
@@ -148,7 +152,11 @@ const KnowledgeBase = () => {
               </div>
               
               <div className="p-6">
-                <div className="border-2 border-dashed border-teal-300 rounded-xl p-12 text-center mb-6 bg-teal-50">
+                <div className="border-2 border-dashed border-teal-300 rounded-xl p-12 text-center mb-6 bg-teal-50"
+                  onClick={() => window.open('https://chat.seasalt.ai/gpt/signup', '_blank')}
+                  onDragOver={e => { e.preventDefault(); e.stopPropagation(); }}
+                  onDrop={e => { e.preventDefault(); window.open('https://chat.seasalt.ai/gpt/signup', '_blank'); }}
+                >
                   <Upload className="w-16 h-16 text-teal-500 mx-auto mb-4" />
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">
                     {t('knowledgeBase.uploadModal.dropzone.title')}
@@ -156,7 +164,9 @@ const KnowledgeBase = () => {
                   <p className="text-gray-600 mb-4">
                     {t('knowledgeBase.uploadModal.dropzone.description')}
                   </p>
-                  <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                  <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                    onClick={e => { e.stopPropagation(); window.open('https://chat.seasalt.ai/gpt/signup', '_blank'); }}
+                  >
                     {t('knowledgeBase.uploadModal.dropzone.button')}
                   </button>
                 </div>
