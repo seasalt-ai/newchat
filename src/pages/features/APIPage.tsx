@@ -93,12 +93,22 @@ const APIPage = () => {
               {t('features.api.subtitle', 'Build custom integrations and extend SeaChat\'s capabilities with our comprehensive API and developer-friendly tools.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
                 {t('features.api.getKeyButton', 'Get API Key')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+              </a>
+              <a
+                href="https://api.seasalt.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
                 {t('features.api.viewDocsButton', 'View Documentation')}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -291,13 +301,23 @@ client.on('message.received', (message) => {
             {t('features.api.ctaSubtitle', 'Get your API key and start integrating SeaChat into your applications today.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
               {t('features.api.ctaAccessButton', 'Get API Access')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            </a>
+            <a
+              href="https://api.seasalt.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
               <Book className="w-5 h-5 mr-2" />
               {t('features.api.ctaDocsButton', 'Read Documentation')}
-            </button>
+            </a>
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Globe, MessageSquare, Phone, Mail, Instagram, Facebook, Zap, ArrowRight } from 'lucide-react';
+import { Globe, MessageSquare, Phone, Mail, Instagram, Facebook, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const OmnichannelPage = () => {
@@ -113,12 +112,22 @@ const OmnichannelPage = () => {
               {t('features.omnichannel.subtitle', 'Connect all your customer touchpoints in one unified platform. Provide consistent, seamless support across websites, social media, phone, and email.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-500 hover:bg-purple-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('features.omnichannel.connectButton', 'Connect All Channels')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('features.omnichannel.demoButton', 'View Channel Demo')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-500 hover:bg-purple-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
+                Sign Up For Free
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                Schedule Demo
+              </a>
             </div>
           </div>
         </div>
@@ -272,13 +281,23 @@ const OmnichannelPage = () => {
             {t('features.omnichannel.ctaSubtitle', 'Connect all your customer touchpoints and provide seamless support experiences that keep customers coming back.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('features.omnichannel.ctaTrialButton', 'Start Omnichannel Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-              {t('features.omnichannel.ctaIntegrationsButton', 'See All Integrations')}
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              Sign Up For Free
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
+              Schedule Demo
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

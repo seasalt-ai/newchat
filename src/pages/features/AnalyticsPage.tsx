@@ -1,5 +1,4 @@
-import React from 'react';
-import { BarChart3, TrendingUp, Users, Clock, Target, Eye, ArrowRight, Download } from 'lucide-react';
+import { BarChart3, TrendingUp, Users, Clock, Target, Eye } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const AnalyticsPage = () => {
@@ -99,12 +98,22 @@ const AnalyticsPage = () => {
               {t('features.analytics.subtitle', 'Make data-driven decisions with comprehensive analytics that reveal customer behavior, agent performance, and optimization opportunities.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('features.analytics.demoButton', 'View Analytics Demo')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('features.analytics.downloadButton', 'Download Sample Report')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
+                Sign Up For Free
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                Schedule Demo
+              </a>
             </div>
           </div>
         </div>
@@ -253,13 +262,22 @@ const AnalyticsPage = () => {
             {t('features.analytics.ctaSubtitle', 'Unlock the power of analytics to optimize your customer support and drive business growth.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('features.analytics.ctaFreeButton', 'Try Analytics Free')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-              <Download className="w-5 h-5 mr-2" />
-              {t('features.analytics.ctaDownloadButton', 'Download Report Sample')}
-            </button>
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              Sign Up For Free
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
+              Schedule Demo
+            </a>
           </div>
         </div>
       </section>
