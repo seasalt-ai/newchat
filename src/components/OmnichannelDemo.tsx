@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageCircle, Instagram, Facebook, Twitter, Mail, Phone, Globe, ShoppingBag, Palette, MessageSquare, Zap, ArrowRight, Check, Info } from 'lucide-react';
+import { MessageCircle, Instagram, Facebook, Twitter, Mail, Phone, Globe, ShoppingBag, Palette, MessageSquare, Zap, ArrowRight, Check, Info, MessageSquareText } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const OmnichannelDemo = () => {
@@ -133,8 +133,18 @@ const OmnichannelDemo = () => {
     'Shopify': ShoppingBag,
     'Wix': Palette,
     'Squarespace': Palette,
-    'MailerLite': Zap
-  };
+    'MailerLite': Zap,
+    'WhatsApp': MessageCircle,
+    'Instagram': Instagram,
+    'Facebook': Facebook,
+    'Line': MessageSquareText,
+    'Phone Call': Phone,
+    'Email': Mail,
+    'Contact Form': Info,
+    'SMS': MessageSquare
+  } as const;
+
+  type PlatformKey = keyof typeof platformIcons;
 
   const getChannel = (id: string) => channels.find(channel => channel.id === id) || channels[0];
   const currentChannel = getChannel(activeChannel);
@@ -248,11 +258,15 @@ const OmnichannelDemo = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('omnichannelDemo.platformCategories.website.title', 'Website Integration')}</h3>
             <p className="text-gray-600 mb-4">{t('omnichannelDemo.platformCategories.website.description', 'Deploy on any website platform with our universal widget')}</p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['Generic Website', 'WordPress', 'Shopify', 'Wix', 'Squarespace'].map((platform) => (
-                <span key={platform} className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">
-                  {platform}
-                </span>
-              ))}
+              {(['Generic Website', 'WordPress', 'Shopify', 'Wix', 'Squarespace'] as PlatformKey[]).map((platform) => {
+                const Icon = platformIcons[platform];
+                return (
+                  <span key={platform} className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                    {Icon && <Icon className="w-4 h-4 mr-1" />}
+                    {platform}
+                  </span>
+                );
+              })}
             </div>
           </div>
           
@@ -263,11 +277,15 @@ const OmnichannelDemo = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('omnichannelDemo.platformCategories.socialMedia.title', 'Social Media')}</h3>
             <p className="text-gray-600 mb-4">{t('omnichannelDemo.platformCategories.socialMedia.description', 'Connect with customers on their favorite social platforms')}</p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['WhatsApp', 'Instagram', 'Facebook', 'Twitter'].map((platform) => (
-                <span key={platform} className="bg-pink-50 text-pink-700 px-3 py-1 rounded-full text-sm">
-                  {platform}
-                </span>
-              ))}
+              {(['WhatsApp', 'Instagram', 'Facebook', 'Line'] as PlatformKey[]).map((platform) => {
+                const Icon = platformIcons[platform];
+                return (
+                  <span key={platform} className="bg-pink-50 text-pink-700 px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                    {Icon && <Icon className="w-4 h-4 mr-1" />}
+                    {platform}
+                  </span>
+                );
+              })}
             </div>
           </div>
           
@@ -278,11 +296,15 @@ const OmnichannelDemo = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('omnichannelDemo.platformCategories.traditional.title', 'Traditional Channels')}</h3>
             <p className="text-gray-600 mb-4">{t('omnichannelDemo.platformCategories.traditional.description', 'Maintain support through classic communication methods')}</p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['Phone Call', 'Email', 'Contact Form'].map((platform) => (
-                <span key={platform} className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">
-                  {platform}
-                </span>
-              ))}
+              {(['Phone Call', 'Email', 'Contact Form', 'SMS'] as PlatformKey[]).map((platform) => {
+                const Icon = platformIcons[platform];
+                return (
+                  <span key={platform} className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                    {Icon && <Icon className="w-4 h-4 mr-1" />}
+                    {platform}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>
