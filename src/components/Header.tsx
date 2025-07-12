@@ -210,9 +210,9 @@ const Header = () => {
             <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               {t('common.signIn')}
             </button>
-            <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105">
+            <a href="https://chat.seasalt.ai/gpt/signup" className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105">
               {t('common.getStarted')}
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}

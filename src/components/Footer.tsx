@@ -168,9 +168,9 @@ const Footer = () => {
                 placeholder={t('footer.enterEmail')}
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              <a href="https://chat.seasalt.ai/gpt/signup" className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 {t('common.getStarted')}
-              </button>
+              </a>
             </div>
             
             <p className="text-sm text-gray-500">

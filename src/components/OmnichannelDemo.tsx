@@ -289,9 +289,9 @@ const OmnichannelDemo = () => {
           </div>
           
           <div className="text-center mt-8">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <a href="https://chat.seasalt.ai/gpt/signup" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
               {t('omnichannelDemo.quickSetup.button', 'Start Free Deployment')}
-            </button>
+            </a>
           </div>
         </div>
       </div>
