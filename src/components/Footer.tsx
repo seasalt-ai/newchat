@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageCircle, Twitter, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { MessageCircle, Twitter, Linkedin, Facebook, Mail, Phone, MapPin, Youtube } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -69,13 +70,18 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-4">
-              <a href="https://x.com/seasaltai" className="text-gray-400 hover:text-teal-400 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/company/66729549/" className="text-gray-400 hover:text-teal-400 transition-colors">
+              <a href="https://www.linkedin.com/company/seasalt-ai/" className="text-gray-400 hover:text-teal-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-
+              <a href="https://www.youtube.com/@seasaltai" className="text-gray-400 hover:text-teal-400 transition-colors">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/SeasaltAI" className="text-gray-400 hover:text-teal-400 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://discord.gg/VgAWg3c7rU" className="text-gray-400 hover:text-teal-400 transition-colors">
+                <FaDiscord className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -186,7 +192,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center text-gray-400 text-sm mt-8">
-          <br /><p>Made with <i className="fa fa-heart"></i> in the city of 
+          <br /><p>Made with <i className="fa fa-heart"></i> in the city of &nbsp;
           <i className="fa fa-coffee"></i>&nbsp;
           <i className="fa fa-umbrella"></i>&nbsp;
           <i className="fa fa-plane"></i>&nbsp;
