@@ -27,7 +27,8 @@ const Footer = () => {
     { name: 'Blog', href: '#blog' },
     { name: 'Community', href: '#community' },
     { name: 'Help Center', href: '#help' },
-    { name: 'Status Page', href: '#status' }
+    { name: 'Status Page', href: '#status' },
+    { name: 'Product Wiki', href: 'https://wiki.seasalt.ai/seachat' }
   ];
 
   const legalLinks = [
@@ -45,7 +46,6 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <img src="/seachat-icon.png" alt="SeaChat Icon" className="w-10 h-10 mr-3" />
               <img src="/seachat-logo.png" alt="SeaChat Logo" className="h-8" />
             </div>
             
