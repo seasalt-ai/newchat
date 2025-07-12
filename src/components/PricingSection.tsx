@@ -211,9 +211,15 @@ const PricingSection = () => {
                   </div>
                 )}
 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 ${plan.buttonStyle}`}>
-                  {plan.buttonText}
-                </button>
+                {plan.id === 'free' ? (
+                  <a href="https://chat.seasalt.ai/gpt/signup" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 text-center inline-block ${plan.buttonStyle}`}>
+                    {plan.buttonText}
+                  </a>
+                ) : (
+                  <a href="https://chat.seasalt.ai/gpt/signup" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 text-center inline-block ${plan.buttonStyle}`}>
+                    {plan.buttonText}
+                  </a>
+                )}
               </div>
             </div>
           ))}

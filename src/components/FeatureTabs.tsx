@@ -176,9 +176,9 @@ const FeatureTabs = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+                <a href="https://chat.seasalt.ai/gpt/signup" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-block">
                   {t('featureTabs.content.advancedAI.tryDemo')}
-                </button>
+                </a>
                 <button className="flex items-center justify-center space-x-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all">
                   <Play className="w-5 h-5" />
                   <span>{t('featureTabs.content.advancedAI.watchAI')}</span>
@@ -215,12 +215,12 @@ const FeatureTabs = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                <a href="https://chat.seasalt.ai/gpt/signup" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 inline-block">
                   {activeTab === 'agent-chat' ? t('featureTabs.content.agentChat.tryFeature') : 
                    activeTab === 'ai-agent' ? t('featureTabs.content.aiAgent.tryFeature') :
                    activeTab === 'knowledge-base' ? t('featureTabs.content.knowledgeBase.tryFeature') :
                    t('featureTabs.content.integrations.tryFeature')}
-                </button>
+                </a>
                 <button className="flex items-center justify-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold">
                   <Play className="w-5 h-5" />
                   <span>{activeTab === 'agent-chat' ? t('featureTabs.content.agentChat.watchDemo') : 
