@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MessageCircle, Instagram, Facebook, Twitter, Mail, Phone, Globe, ShoppingBag, Palette, MessageSquare, Zap, ArrowRight, Check, Info } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const OmnichannelDemo = () => {
   const { t } = useTranslation();
   const [activeChannel, setActiveChannel] = useState('website');
+  const [fade, setFade] = useState(false);
   
   const channels = [
+
     {
       id: 'website',
       name: t('omnichannelDemo.channels.website.name', 'Website'),
@@ -103,9 +105,27 @@ const OmnichannelDemo = () => {
         'Product information',
         'Inventory checks',
         'Shopping cart recovery'
-      ]
+  ]
     }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveChannel((prevChannelId) => {
+        const currentIndex = channels.findIndex(c => c.id === prevChannelId);
+        const nextIndex = (currentIndex + 1) % channels.length;
+        return channels[nextIndex].id;
+      });
+    }, 3000); // Change channel every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [channels]);
+
+  useEffect(() => {
+    setFade(true);
+    const timeout = setTimeout(() => setFade(false), 300); // Duration of fade-out
+    return () => clearTimeout(timeout);
+  }, [activeChannel]);
 
   const platformIcons = {
     'Generic Website': Globe,
@@ -170,7 +190,7 @@ const OmnichannelDemo = () => {
 
           {/* Channel Details */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full">
+            <div className={`bg-white rounded-2xl shadow-lg overflow-hidden h-full transition-opacity duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}>
               <div className={`${currentChannel.color} p-6 text-white`}>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
