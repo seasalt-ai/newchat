@@ -58,28 +58,26 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-4 h-4" />
-                <span>hello@seachat.com</span>
+                <span>info@seasalt.ai</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (877) 731-2882</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Seattle, WA</span>
               </div>
             </div>
             
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors">
+              <a href="https://x.com/seasaltai" className="text-gray-400 hover:text-teal-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors">
+              <a href="https://www.linkedin.com/company/66729549/" className="text-gray-400 hover:text-teal-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
+
             </div>
           </div>
 
@@ -180,7 +178,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            {t('footer.copyright')}
+            © 2020 - {new Date().getFullYear()} Seasalt.ai All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -188,6 +186,13 @@ const Footer = () => {
             <span>{t('footer.gdpr')}</span>
             <span>{t('footer.uptime')}</span>
           </div>
+        </div>
+        <div className="text-center text-gray-400 text-sm mt-8">
+          <br /><p>Made with <i className="fa fa-heart"></i> in the city of 
+          <i className="fa fa-coffee"></i>&nbsp;
+          <i className="fa fa-umbrella"></i>&nbsp;
+          <i className="fa fa-plane"></i>&nbsp;
+          <i className="fa fa-diamond"></i></p>
         </div>
       </div>
     </footer>
