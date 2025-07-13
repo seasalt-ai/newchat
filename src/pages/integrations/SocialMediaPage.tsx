@@ -64,20 +64,6 @@ const SocialMediaPage = () => {
       setupTime: t('integrations.social.platforms.twitter.setupTime', '15 minutes')
     },
     {
-      name: t('integrations.social.platforms.tiktok.name', 'TikTok'),
-      icon: SiTiktok,
-      color: 'from-black to-gray-800',
-      description: t('integrations.social.platforms.tiktok.description', 'Engage with your audience and manage customer interactions on TikTok'),
-      features: [
-        t('integrations.social.platforms.tiktok.features.comments', 'Comment management'), 
-        t('integrations.social.platforms.tiktok.features.dm', 'Direct messages'), 
-        t('integrations.social.platforms.tiktok.features.analytics', 'Audience analytics'), 
-        t('integrations.social.platforms.tiktok.features.ads', 'Ad campaign support')
-      ],
-      users: t('integrations.social.platforms.tiktok.users', '1B+ users'),
-      setupTime: t('integrations.social.platforms.tiktok.setupTime', '15 minutes')
-    },
-    {
       name: t('integrations.social.platforms.line.name', 'LINE'),
       icon: SiLine,
       color: 'from-green-400 to-green-600',
@@ -90,6 +76,20 @@ const SocialMediaPage = () => {
       ],
       users: t('integrations.social.platforms.line.users', '180M+ users'),
       setupTime: t('integrations.social.platforms.line.setupTime', '10 minutes')
+    },
+    {
+      name: t('integrations.social.platforms.tiktok.name', 'TikTok'),
+      icon: SiTiktok,
+      color: 'from-black to-gray-800',
+      description: t('integrations.social.platforms.tiktok.description', 'Engage with your audience and manage customer interactions on TikTok'),
+      features: [
+        t('integrations.social.platforms.tiktok.features.comments', 'Comment management'), 
+        t('integrations.social.platforms.tiktok.features.dm', 'Direct messages'), 
+        t('integrations.social.platforms.tiktok.features.analytics', 'Audience analytics'), 
+        t('integrations.social.platforms.tiktok.features.ads', 'Ad campaign support')
+      ],
+      users: t('integrations.social.platforms.tiktok.users', '1B+ users'),
+      setupTime: t('integrations.social.platforms.tiktok.setupTime', '15 minutes')
     }
   ];
 
