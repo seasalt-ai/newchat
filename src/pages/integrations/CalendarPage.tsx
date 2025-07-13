@@ -7,74 +7,18 @@ const CalendarPage = () => {
   
   const platforms = [
     {
-      name: t('integrations.calendar.platforms.google.name', 'Google Calendar'),
-      icon: Calendar,
-      color: 'from-blue-500 to-indigo-500',
-      description: t('integrations.calendar.platforms.google.description', 'Seamless integration with Google Calendar for appointment scheduling'),
-      features: [
-        t('integrations.calendar.platforms.google.features.meetings', 'Meeting scheduling'), 
-        t('integrations.calendar.platforms.google.features.availability', 'Availability sync'), 
-        t('integrations.calendar.platforms.google.features.events', 'Event creation'), 
-        t('integrations.calendar.platforms.google.features.reminders', 'Reminder notifications')
-      ],
-      setupTime: t('integrations.calendar.platforms.google.setupTime', '5 minutes'),
-      category: t('integrations.calendar.platforms.google.category', 'Google Workspace')
-    },
-    {
-      name: t('integrations.calendar.platforms.outlook.name', 'Microsoft Outlook'),
-      icon: Calendar,
-      color: 'from-blue-600 to-purple-600',
-      description: t('integrations.calendar.platforms.outlook.description', 'Microsoft Outlook and Office 365 calendar integration'),
-      features: [
-        t('integrations.calendar.platforms.outlook.features.exchange', 'Exchange sync'), 
-        t('integrations.calendar.platforms.outlook.features.rooms', 'Meeting rooms'), 
-        t('integrations.calendar.platforms.outlook.features.recurring', 'Recurring events'), 
-        t('integrations.calendar.platforms.outlook.features.team', 'Team calendars')
-      ],
-      setupTime: t('integrations.calendar.platforms.outlook.setupTime', '8 minutes'),
-      category: t('integrations.calendar.platforms.outlook.category', 'Microsoft 365')
-    },
-    {
-      name: t('integrations.calendar.platforms.calendly.name', 'Calendly'),
-      icon: Clock,
-      color: 'from-green-500 to-teal-500',
-      description: t('integrations.calendar.platforms.calendly.description', 'Popular scheduling tool for automated appointment booking'),
-      features: [
-        t('integrations.calendar.platforms.calendly.features.booking', 'Booking pages'), 
-        t('integrations.calendar.platforms.calendly.features.buffer', 'Buffer times'), 
-        t('integrations.calendar.platforms.calendly.features.questions', 'Custom questions'), 
-        t('integrations.calendar.platforms.calendly.features.payment', 'Payment integration')
-      ],
-      setupTime: t('integrations.calendar.platforms.calendly.setupTime', '10 minutes'),
-      category: t('integrations.calendar.platforms.calendly.category', 'Scheduling')
-    },
-    {
       name: t('integrations.calendar.platforms.acuity.name', 'Acuity Scheduling'),
       icon: Users,
       color: 'from-purple-500 to-pink-500',
       description: t('integrations.calendar.platforms.acuity.description', 'Advanced scheduling with client management features'),
       features: [
-        t('integrations.calendar.platforms.acuity.features.intake', 'Client intake forms'), 
-        t('integrations.calendar.platforms.acuity.features.packages', 'Package scheduling'), 
-        t('integrations.calendar.platforms.acuity.features.group', 'Group appointments'), 
+        t('integrations.calendar.platforms.acuity.features.intake', 'Client intake forms'),
+        t('integrations.calendar.platforms.acuity.features.packages', 'Package scheduling'),
+        t('integrations.calendar.platforms.acuity.features.group', 'Group appointments'),
         t('integrations.calendar.platforms.acuity.features.workflows', 'Automated workflows')
       ],
       setupTime: t('integrations.calendar.platforms.acuity.setupTime', '12 minutes'),
       category: t('integrations.calendar.platforms.acuity.category', 'Professional')
-    },
-    {
-      name: t('integrations.calendar.platforms.zoom.name', 'Zoom Scheduler'),
-      icon: Video,
-      color: 'from-blue-400 to-blue-600',
-      description: t('integrations.calendar.platforms.zoom.description', 'Video meeting scheduling with Zoom integration'),
-      features: [
-        t('integrations.calendar.platforms.zoom.features.meetings', 'Video meetings'), 
-        t('integrations.calendar.platforms.zoom.features.webinar', 'Webinar scheduling'), 
-        t('integrations.calendar.platforms.zoom.features.recording', 'Recording setup'), 
-        t('integrations.calendar.platforms.zoom.features.waiting', 'Waiting rooms')
-      ],
-      setupTime: t('integrations.calendar.platforms.zoom.setupTime', '7 minutes'),
-      category: t('integrations.calendar.platforms.zoom.category', 'Video Conferencing')
     },
     {
       name: t('integrations.calendar.platforms.apple.name', 'Apple Calendar'),
@@ -82,13 +26,111 @@ const CalendarPage = () => {
       color: 'from-gray-600 to-gray-800',
       description: t('integrations.calendar.platforms.apple.description', 'iCloud calendar integration for Apple ecosystem users'),
       features: [
-        t('integrations.calendar.platforms.apple.features.sync', 'iCloud sync'), 
-        t('integrations.calendar.platforms.apple.features.devices', 'Cross-device access'), 
-        t('integrations.calendar.platforms.apple.features.sharing', 'Event sharing'), 
+        t('integrations.calendar.platforms.apple.features.sync', 'iCloud sync'),
+        t('integrations.calendar.platforms.apple.features.devices', 'Cross-device access'),
+        t('integrations.calendar.platforms.apple.features.sharing', 'Event sharing'),
         t('integrations.calendar.platforms.apple.features.location', 'Location services')
       ],
       setupTime: t('integrations.calendar.platforms.apple.setupTime', '6 minutes'),
       category: t('integrations.calendar.platforms.apple.category', 'Apple Ecosystem')
+    },
+    {
+      name: t('integrations.calendar.platforms.calcom.name', 'Cal.com'),
+      icon: Clock,
+      color: 'from-gray-800 to-gray-600',
+      description: t('integrations.calendar.platforms.calcom.description', 'Open scheduling infrastructure for teams and individuals'),
+      features: [
+        t('integrations.calendar.platforms.calcom.features.booking', 'Booking links'),
+        t('integrations.calendar.platforms.calcom.features.workflows', 'Custom workflows'),
+        t('integrations.calendar.platforms.calcom.features.payments', 'Payment integration'),
+        t('integrations.calendar.platforms.calcom.features.api', 'API & webhooks')
+      ],
+      setupTime: t('integrations.calendar.platforms.calcom.setupTime', '7 minutes'),
+      category: t('integrations.calendar.platforms.calcom.category', 'Open Scheduling')
+    },
+    {
+      name: t('integrations.calendar.platforms.calendly.name', 'Calendly'),
+      icon: Clock,
+      color: 'from-green-500 to-teal-500',
+      description: t('integrations.calendar.platforms.calendly.description', 'Popular scheduling tool for automated appointment booking'),
+      features: [
+        t('integrations.calendar.platforms.calendly.features.booking', 'Booking pages'),
+        t('integrations.calendar.platforms.calendly.features.buffer', 'Buffer times'),
+        t('integrations.calendar.platforms.calendly.features.questions', 'Custom questions'),
+        t('integrations.calendar.platforms.calendly.features.payment', 'Payment integration')
+      ],
+      setupTime: t('integrations.calendar.platforms.calendly.setupTime', '10 minutes'),
+      category: t('integrations.calendar.platforms.calendly.category', 'Scheduling')
+    },
+    {
+      name: t('integrations.calendar.platforms.google.name', 'Google Calendar'),
+      icon: Calendar,
+      color: 'from-blue-500 to-indigo-500',
+      description: t('integrations.calendar.platforms.google.description', 'Seamless integration with Google Calendar for appointment scheduling'),
+      features: [
+        t('integrations.calendar.platforms.google.features.meetings', 'Meeting scheduling'),
+        t('integrations.calendar.platforms.google.features.availability', 'Availability sync'),
+        t('integrations.calendar.platforms.google.features.events', 'Event creation'),
+        t('integrations.calendar.platforms.google.features.reminders', 'Reminder notifications')
+      ],
+      setupTime: t('integrations.calendar.platforms.google.setupTime', '5 minutes'),
+      category: t('integrations.calendar.platforms.google.category', 'Google Workspace')
+    },
+    {
+      name: t('integrations.calendar.platforms.highlevel.name', 'HighLevel'),
+      icon: Users,
+      color: 'from-indigo-700 to-blue-700',
+      description: t('integrations.calendar.platforms.highlevel.description', 'All-in-one sales, marketing, and calendar automation'),
+      features: [
+        t('integrations.calendar.platforms.highlevel.features.pipelines', 'Sales pipelines'),
+        t('integrations.calendar.platforms.highlevel.features.reminders', 'Automated reminders'),
+        t('integrations.calendar.platforms.highlevel.features.forms', 'Booking forms'),
+        t('integrations.calendar.platforms.highlevel.features.integration', 'CRM integration')
+      ],
+      setupTime: t('integrations.calendar.platforms.highlevel.setupTime', '9 minutes'),
+      category: t('integrations.calendar.platforms.highlevel.category', 'All-in-One')
+    },
+    {
+      name: t('integrations.calendar.platforms.notion.name', 'Notion'),
+      icon: Calendar,
+      color: 'from-black to-gray-700',
+      description: t('integrations.calendar.platforms.notion.description', 'Calendar and project management with Notion integration'),
+      features: [
+        t('integrations.calendar.platforms.notion.features.sync', 'Calendar sync'),
+        t('integrations.calendar.platforms.notion.features.tasks', 'Task scheduling'),
+        t('integrations.calendar.platforms.notion.features.templates', 'Custom templates'),
+        t('integrations.calendar.platforms.notion.features.automation', 'Workflow automation')
+      ],
+      setupTime: t('integrations.calendar.platforms.notion.setupTime', '6 minutes'),
+      category: t('integrations.calendar.platforms.notion.category', 'Productivity')
+    },
+    {
+      name: t('integrations.calendar.platforms.outlook.name', 'Microsoft Outlook'),
+      icon: Calendar,
+      color: 'from-blue-600 to-purple-600',
+      description: t('integrations.calendar.platforms.outlook.description', 'Microsoft Outlook and Office 365 calendar integration'),
+      features: [
+        t('integrations.calendar.platforms.outlook.features.exchange', 'Exchange sync'),
+        t('integrations.calendar.platforms.outlook.features.rooms', 'Meeting rooms'),
+        t('integrations.calendar.platforms.outlook.features.recurring', 'Recurring events'),
+        t('integrations.calendar.platforms.outlook.features.team', 'Team calendars')
+      ],
+      setupTime: t('integrations.calendar.platforms.outlook.setupTime', '8 minutes'),
+      category: t('integrations.calendar.platforms.outlook.category', 'Microsoft 365')
+    },
+    {
+      name: t('integrations.calendar.platforms.zoom.name', 'Zoom Scheduler'),
+      icon: Video,
+      color: 'from-blue-400 to-blue-600',
+      description: t('integrations.calendar.platforms.zoom.description', 'Video meeting scheduling with Zoom integration'),
+      features: [
+        t('integrations.calendar.platforms.zoom.features.meetings', 'Video meetings'),
+        t('integrations.calendar.platforms.zoom.features.webinar', 'Webinar scheduling'),
+        t('integrations.calendar.platforms.zoom.features.recording', 'Recording setup'),
+        t('integrations.calendar.platforms.zoom.features.waiting', 'Waiting rooms')
+      ],
+      setupTime: t('integrations.calendar.platforms.zoom.setupTime', '7 minutes'),
+      category: t('integrations.calendar.platforms.zoom.category', 'Video Conferencing')
     }
   ];
 
@@ -161,12 +203,22 @@ const CalendarPage = () => {
               {t('integrations.calendar.subtitle', 'Integrate with popular calendar platforms to enable seamless appointment scheduling directly from customer support conversations.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
                 {t('integrations.calendar.connectButton', 'Connect Calendar')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('integrations.calendar.demoButton', 'View Scheduling Demo')}
-              </button>
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                {t('integrations.calendar.demoButton', 'Book Scheduling Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -219,9 +271,14 @@ const CalendarPage = () => {
                     </div>
                   </div>
                   
-                  <button className={`w-full bg-gradient-to-r ${platform.color} hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105`}>
+                  <a
+                    href="https://chat.seasalt.ai/gpt/signup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full bg-gradient-to-r ${platform.color} hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 text-center block`}
+                  >
                     {t('integrations.calendar.connectPlatform', 'Connect')} {platform.name}
-                  </button>
+                  </a>
                 </div>
               );
             })}
@@ -355,13 +412,23 @@ const CalendarPage = () => {
             {t('integrations.calendar.ctaSubtitle', 'Connect your calendar and let customers book appointments seamlessly through your support conversations.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
               {t('integrations.calendar.ctaConnectButton', 'Connect Your Calendar')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            </a>
+            <a
+              href="http://wiki.seasalt.ai/seachat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center"
+            >
               {t('integrations.calendar.ctaGuideButton', 'View Setup Guide')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
