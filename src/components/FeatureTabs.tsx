@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Users, Bot, BookOpen, Zap, Play, Check, Brain, Clock, Search, Database, FileText, Target } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const FeatureTabs = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('agent-chat');
+
+  const tabs = useMemo(() => [
+    { id: 'agent-chat', label: t('featureTabs.tabs.humanAgent', 'Human Agent'), icon: Users },
+    { id: 'ai-agent', label: t('featureTabs.tabs.aiAgent'), icon: Bot },
+    { id: 'advanced-ai', label: t('featureTabs.tabs.advancedAI'), icon: Brain },
+    { id: 'knowledge-base', label: t('featureTabs.tabs.knowledgeBase'), icon: BookOpen },
+    { id: 'integrations', label: t('featureTabs.tabs.integrations'), icon: Zap }
+  ], [t]);
 
   // Auto-cycle tabs every 3 seconds
   useEffect(() => {
@@ -16,15 +24,7 @@ const FeatureTabs = () => {
       });
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
-
-  const tabs = [
-    { id: 'agent-chat', label: t('featureTabs.tabs.humanAgent', 'Human Agent'), icon: Users },
-    { id: 'ai-agent', label: t('featureTabs.tabs.aiAgent'), icon: Bot },
-    { id: 'advanced-ai', label: t('featureTabs.tabs.advancedAI'), icon: Brain },
-    { id: 'knowledge-base', label: t('featureTabs.tabs.knowledgeBase'), icon: BookOpen },
-    { id: 'integrations', label: t('featureTabs.tabs.integrations'), icon: Zap }
-  ];
+  }, [tabs]);
 
   const tabContent = {
     'agent-chat': {

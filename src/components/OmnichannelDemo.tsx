@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { MessageCircle, Instagram, Facebook, Twitter, Mail, Phone, Globe, ShoppingBag, Palette, MessageSquare, Zap, ArrowRight, Check, Info, MessageSquareText } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SiLine, SiWordpress, SiWix, SiShopify, SiZendesk } from 'react-icons/si';
@@ -17,8 +17,7 @@ const OmnichannelDemo = () => {
   const [activeChannel, setActiveChannel] = useState('website');
   const [fade, setFade] = useState(false);
   
-  const channels = [
-
+  const channels = useMemo(() => ([
     {
       id: 'website',
       name: t('omnichannelDemo.channels.website.name', 'Website'),
@@ -129,9 +128,9 @@ const OmnichannelDemo = () => {
         'Product information',
         'Inventory checks',
         'Shopping cart recovery'
-  ]
+      ]
     }
-  ];
+  ]), [t]);
 
   useEffect(() => {
     const interval = setInterval(() => {
