@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageSquare, Instagram, Facebook, Twitter, Linkedin, Youtube, ArrowRight, CheckCircle } from 'lucide-react';
+import { MessageSquare, Instagram, Facebook, ArrowRight, CheckCircle } from 'lucide-react';
+import { SiTiktok, SiLine, SiWhatsapp, SiX } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 
 const SocialMediaPage = () => {
@@ -8,7 +9,7 @@ const SocialMediaPage = () => {
   const platforms = [
     {
       name: t('integrations.social.platforms.whatsapp.name', 'WhatsApp Business'),
-      icon: MessageSquare,
+      icon: SiWhatsapp,
       color: 'from-green-500 to-emerald-500',
       description: t('integrations.social.platforms.whatsapp.description', 'Connect with customers on the world\'s most popular messaging platform'),
       features: [
@@ -50,7 +51,7 @@ const SocialMediaPage = () => {
     },
     {
       name: t('integrations.social.platforms.twitter.name', 'Twitter/X'),
-      icon: Twitter,
+      icon: SiX,
       color: 'from-gray-700 to-black',
       description: t('integrations.social.platforms.twitter.description', 'Handle customer inquiries and mentions on Twitter/X platform'),
       features: [
@@ -63,32 +64,32 @@ const SocialMediaPage = () => {
       setupTime: t('integrations.social.platforms.twitter.setupTime', '15 minutes')
     },
     {
-      name: t('integrations.social.platforms.linkedin.name', 'LinkedIn'),
-      icon: Linkedin,
-      color: 'from-blue-600 to-blue-700',
-      description: t('integrations.social.platforms.linkedin.description', 'Professional networking and B2B customer support on LinkedIn'),
+      name: t('integrations.social.platforms.tiktok.name', 'TikTok'),
+      icon: SiTiktok,
+      color: 'from-black to-gray-800',
+      description: t('integrations.social.platforms.tiktok.description', 'Engage with your audience and manage customer interactions on TikTok'),
       features: [
-        t('integrations.social.platforms.linkedin.features.company', 'Company page'), 
-        t('integrations.social.platforms.linkedin.features.messaging', 'Professional messaging'), 
-        t('integrations.social.platforms.linkedin.features.leads', 'Lead generation'), 
-        t('integrations.social.platforms.linkedin.features.content', 'Content support')
+        t('integrations.social.platforms.tiktok.features.comments', 'Comment management'), 
+        t('integrations.social.platforms.tiktok.features.dm', 'Direct messages'), 
+        t('integrations.social.platforms.tiktok.features.analytics', 'Audience analytics'), 
+        t('integrations.social.platforms.tiktok.features.ads', 'Ad campaign support')
       ],
-      users: t('integrations.social.platforms.linkedin.users', '900M+ users'),
-      setupTime: t('integrations.social.platforms.linkedin.setupTime', '20 minutes')
+      users: t('integrations.social.platforms.tiktok.users', '1B+ users'),
+      setupTime: t('integrations.social.platforms.tiktok.setupTime', '15 minutes')
     },
     {
-      name: t('integrations.social.platforms.youtube.name', 'YouTube'),
-      icon: Youtube,
-      color: 'from-red-500 to-red-600',
-      description: t('integrations.social.platforms.youtube.description', 'Manage YouTube comments and community interactions'),
+      name: t('integrations.social.platforms.line.name', 'LINE'),
+      icon: SiLine,
+      color: 'from-green-400 to-green-600',
+      description: t('integrations.social.platforms.line.description', 'Provide seamless customer support and engagement on LINE'),
       features: [
-        t('integrations.social.platforms.youtube.features.comments', 'Comment moderation'), 
-        t('integrations.social.platforms.youtube.features.community', 'Community posts'), 
-        t('integrations.social.platforms.youtube.features.live', 'Live chat'), 
-        t('integrations.social.platforms.youtube.features.creator', 'Creator support')
+        t('integrations.social.platforms.line.features.messaging', 'Rich messaging'), 
+        t('integrations.social.platforms.line.features.stickers', 'Sticker support'), 
+        t('integrations.social.platforms.line.features.broadcast', 'Broadcast messages'), 
+        t('integrations.social.platforms.line.features.payments', 'LINE Pay integration')
       ],
-      users: t('integrations.social.platforms.youtube.users', '2.7B+ users'),
-      setupTime: t('integrations.social.platforms.youtube.setupTime', '18 minutes')
+      users: t('integrations.social.platforms.line.users', '180M+ users'),
+      setupTime: t('integrations.social.platforms.line.setupTime', '10 minutes')
     }
   ];
 
@@ -134,12 +135,12 @@ const SocialMediaPage = () => {
               {t('integrations.social.subtitle', 'Connect all your social media platforms and provide seamless customer support across WhatsApp, Instagram, Facebook, Twitter, and more.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-pink-500 hover:bg-pink-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a href="https://chat.seasalt.ai/gpt/signup" className="bg-pink-500 hover:bg-pink-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center">
                 {t('integrations.social.connectButton', 'Connect Social Platforms')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-pink-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('integrations.social.demoButton', 'View Social Demo')}
-              </button>
+              </a>
+              <a href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/" className="border-2 border-white text-white hover:bg-white hover:text-pink-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center">
+                {t('integrations.social.demoButton', 'Schedule Social Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -190,9 +191,9 @@ const SocialMediaPage = () => {
                     </div>
                   </div>
                   
-                  <button className={`w-full bg-gradient-to-r ${platform.color} hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105`}>
+                  <a href="https://chat.seasalt.ai/gpt/signup" className={`w-full bg-gradient-to-r ${platform.color} hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 text-center`}>
                     {t('integrations.social.connectPlatform', 'Connect')} {platform.name}
-                  </button>
+                  </a>
                 </div>
               );
             })}
@@ -299,13 +300,13 @@ const SocialMediaPage = () => {
             {t('integrations.social.ctaSubtitle', 'Connect all your social media platforms and provide exceptional customer support where your customers spend their time.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <a href="https://chat.seasalt.ai/gpt/signup" className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center">
               {t('integrations.social.ctaConnectButton', 'Connect Social Platforms')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-              {t('integrations.social.ctaGuideButton', 'View Setup Guide')}
+            </a>
+            <a href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/" className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center">
+              {t('integrations.social.ctaGuideButton', 'Schedule E-commerce Demo')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
