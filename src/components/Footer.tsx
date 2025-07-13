@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Twitter, Linkedin, Facebook, Mail, Phone, MapPin, Youtube } from 'lucide-react';
+import { MessageCircle, Twitter, Linkedin, Facebook, Mail, Phone, MapPin, Youtube, Heart, Coffee, Umbrella, Plane, Gem } from 'lucide-react';
 import { FaDiscord } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
@@ -192,11 +192,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center text-gray-400 text-sm mt-8">
-          <br /><p>Made with <i className="fa fa-heart"></i> in the city of &nbsp;
-          <i className="fa fa-coffee"></i>&nbsp;
-          <i className="fa fa-umbrella"></i>&nbsp;
-          <i className="fa fa-plane"></i>&nbsp;
-          <i className="fa fa-diamond"></i></p>
+          <br />
+          <p>
+            Made with <Heart className="inline w-4 h-4 text-red-500" /> in the city of{' '}
+            <Coffee className="inline w-4 h-4 text-amber-700" />{' '}
+            <Umbrella className="inline w-4 h-4 text-blue-400" />{' '}
+            <Plane className="inline w-4 h-4 text-gray-500" />{' '}
+            <Gem className="inline w-4 h-4 text-fuchsia-500" />
+          </p>
         </div>
       </div>
     </footer>

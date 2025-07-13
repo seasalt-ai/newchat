@@ -77,7 +77,7 @@ const EcommercePage = () => {
       description: t('integrations.ecommerce.platforms.magento.description', 'Enterprise Magento integration for large-scale e-commerce'),
       features: [
         t('integrations.ecommerce.platforms.magento.features.multistore', 'Multi-store support'), 
-        t('integrations.ecommerce.ecommerce.platforms.magento.features.orders', 'Advanced orders'), 
+        t('integrations.ecommerce.platforms.magento.features.orders', 'Advanced orders'), 
         t('integrations.ecommerce.platforms.magento.features.segments', 'Customer segments'), 
         t('integrations.ecommerce.platforms.magento.features.catalog', 'Catalog sync')
       ],
