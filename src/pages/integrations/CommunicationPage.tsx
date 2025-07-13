@@ -192,18 +192,22 @@ const CommunicationPage = () => {
               {t('integrations.communication.subtitle', 'Integrate with popular communication platforms like Slack, Teams, Discord, and more to streamline your support workflow and team collaboration.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                className="bg-indigo-500 hover:bg-indigo-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
-                onClick={() => window.open('https://chat.seasalt.ai/gpt/signup', '_blank')}
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-500 hover:bg-indigo-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-block"
               >
                 {t('integrations.communication.connectButton', 'Connect Communication Tools')}
-              </button>
-              <button
-                className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all"
-                onClick={() => window.open('https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/', '_blank')}
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-block"
               >
                 {t('integrations.communication.demoButton', 'Schedule Integration Demo')}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -256,12 +260,14 @@ const CommunicationPage = () => {
                     </div>
                   </div>
                   
-                <button
-                  className="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 transform hover:scale-105"
-                  onClick={() => window.open('https://chat.seasalt.ai/gpt/signup', '_blank')}
+                <a
+                  href="https://chat.seasalt.ai/gpt/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 transform hover:scale-105 inline-block text-center"
                 >
                   {t('integrations.communication.connectPlatform', 'Connect with {{platformName}}', { platformName: platform.name })}
-                </button>
+                </a>
                 </div>
               );
             })}
@@ -329,18 +335,22 @@ const CommunicationPage = () => {
             {t('integrations.communication.cta.subtitle', 'Connect your favorite communication tools and enhance your team\'s productivity and customer engagement.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="bg-white text-indigo-800 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
-              onClick={() => window.open('https://chat.seasalt.ai/gpt/signup', '_blank')}
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-indigo-800 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-block text-center"
             >
               {t('integrations.communication.cta.connectButton', 'Get Started Now')}
-            </button>
-            <button
-              className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all"
-              onClick={() => window.open('https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/', '_blank')}
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-block text-center"
             >
               {t('integrations.communication.cta.contactButton', 'Contact Sales')}
-            </button>
+            </a>
           </div>
         </div>
       </section>
