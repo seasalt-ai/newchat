@@ -196,12 +196,22 @@ const EducationPage = () => {
               {t('solutions.education.subtitle', 'Transform educational support with AI-powered assistance for students, parents, faculty, and staff. Streamline operations and enhance the learning experience.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('solutions.education.trialButton', 'Start Education Trial')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('solutions.education.demoButton', 'View Education Demo')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
+                {t('solutions.education.trialButton', 'Start Education For Free')}
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                {t('solutions.education.demoButton', 'Schedule Education Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -385,13 +395,23 @@ const EducationPage = () => {
             {t('solutions.education.ctaSubtitle', 'Join educational institutions already using SeaChat to enhance student success and streamline administrative operations.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('solutions.education.ctaTrialButton', 'Start Education Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              {t('solutions.education.ctaTrialButton', 'Start Education For Free')}
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
               {t('solutions.education.ctaDemoButton', 'Schedule Education Demo')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

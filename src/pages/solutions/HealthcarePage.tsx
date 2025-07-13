@@ -120,12 +120,22 @@ const HealthcarePage = () => {
               {t('solutions.healthcare.subtitle', 'Transform patient care with HIPAA-compliant customer support that improves patient satisfaction, streamlines operations, and enhances care coordination.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('solutions.healthcare.trialButton', 'Start Healthcare Trial')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('solutions.healthcare.demoButton', 'View Healthcare Demo')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
+                {t('solutions.healthcare.trialButton', 'Start Healthcare For Free')}
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                {t('solutions.healthcare.demoButton', 'Schedule Healthcare Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -302,13 +312,23 @@ const HealthcarePage = () => {
             {t('solutions.healthcare.ctaSubtitle', 'Join healthcare providers already using SeaChat to deliver exceptional patient experiences while maintaining the highest security and compliance standards.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('solutions.healthcare.ctaTrialButton', 'Start Healthcare Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              {t('solutions.healthcare.ctaTrialButton', 'Start Healthcare For Free')}
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
               {t('solutions.healthcare.ctaDemoButton', 'Schedule Healthcare Demo')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

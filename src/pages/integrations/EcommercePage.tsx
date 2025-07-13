@@ -7,45 +7,6 @@ const EcommercePage = () => {
   
   const platforms = [
     {
-      name: t('integrations.ecommerce.platforms.shopify.name', 'Shopify'),
-      logo: '🛍️',
-      description: t('integrations.ecommerce.platforms.shopify.description', 'Complete Shopify integration with order management and customer sync'),
-      features: [
-        t('integrations.ecommerce.platforms.shopify.features.orders', 'Order tracking'), 
-        t('integrations.ecommerce.platforms.shopify.features.catalog', 'Product catalog'), 
-        t('integrations.ecommerce.platforms.shopify.features.customers', 'Customer profiles'), 
-        t('integrations.ecommerce.platforms.shopify.features.inventory', 'Inventory sync')
-      ],
-      setupTime: t('integrations.ecommerce.platforms.shopify.setupTime', '5 minutes'),
-      popularity: t('integrations.ecommerce.platforms.shopify.popularity', 'Most Popular')
-    },
-    {
-      name: t('integrations.ecommerce.platforms.woocommerce.name', 'WooCommerce'),
-      logo: '🛒',
-      description: t('integrations.ecommerce.platforms.woocommerce.description', 'WordPress WooCommerce plugin for seamless store integration'),
-      features: [
-        t('integrations.ecommerce.platforms.woocommerce.features.orders', 'Order status'), 
-        t('integrations.ecommerce.platforms.woocommerce.features.products', 'Product support'), 
-        t('integrations.ecommerce.platforms.woocommerce.features.customers', 'Customer history'), 
-        t('integrations.ecommerce.platforms.woocommerce.features.payments', 'Payment tracking')
-      ],
-      setupTime: t('integrations.ecommerce.platforms.woocommerce.setupTime', '8 minutes'),
-      popularity: t('integrations.ecommerce.platforms.woocommerce.popularity', 'WordPress')
-    },
-    {
-      name: t('integrations.ecommerce.platforms.magento.name', 'Magento'),
-      logo: '🏪',
-      description: t('integrations.ecommerce.platforms.magento.description', 'Enterprise Magento integration for large-scale e-commerce'),
-      features: [
-        t('integrations.ecommerce.platforms.magento.features.multistore', 'Multi-store support'), 
-        t('integrations.ecommerce.platforms.magento.features.orders', 'Advanced orders'), 
-        t('integrations.ecommerce.platforms.magento.features.segments', 'Customer segments'), 
-        t('integrations.ecommerce.platforms.magento.features.catalog', 'Catalog sync')
-      ],
-      setupTime: t('integrations.ecommerce.platforms.magento.setupTime', '15 minutes'),
-      popularity: t('integrations.ecommerce.platforms.magento.popularity', 'Enterprise')
-    },
-    {
       name: t('integrations.ecommerce.platforms.bigcommerce.name', 'BigCommerce'),
       logo: '🏬',
       description: t('integrations.ecommerce.platforms.bigcommerce.description', 'BigCommerce API integration for growing online stores'),
@@ -72,17 +33,173 @@ const EcommercePage = () => {
       popularity: t('integrations.ecommerce.platforms.etsy.popularity', 'Creative')
     },
     {
-      name: t('integrations.ecommerce.platforms.amazon.name', 'Amazon Seller'),
-      logo: '📦',
-      description: t('integrations.ecommerce.platforms.amazon.description', 'Amazon Seller Central integration for marketplace sellers'),
+      name: t('integrations.ecommerce.platforms.fourthwall.name', 'Fourthwall'),
+      logo: '🎬',
+      description: t('integrations.ecommerce.platforms.fourthwall.description', 'Platform for creators to build a free website, sell products, and manage memberships'),
       features: [
-        t('integrations.ecommerce.platforms.amazon.features.orders', 'Order tracking'), 
-        t('integrations.ecommerce.platforms.amazon.features.fba', 'FBA support'), 
-        t('integrations.ecommerce.platforms.amazon.features.service', 'Customer service'), 
-        t('integrations.ecommerce.platforms.amazon.features.returns', 'Returns handling')
+        t('integrations.ecommerce.platforms.fourthwall.features.merch', 'Custom merch'),
+        t('integrations.ecommerce.platforms.fourthwall.features.memberships', 'Memberships'),
+        t('integrations.ecommerce.platforms.fourthwall.features.donations', 'Donations'),
+        t('integrations.ecommerce.platforms.fourthwall.features.community', 'Community tools')
       ],
-      setupTime: t('integrations.ecommerce.platforms.amazon.setupTime', '20 minutes'),
-      popularity: t('integrations.ecommerce.platforms.amazon.popularity', 'Marketplace')
+      setupTime: t('integrations.ecommerce.platforms.fourthwall.setupTime', '10 minutes'),
+      popularity: t('integrations.ecommerce.platforms.fourthwall.popularity', 'Creator Economy')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.godaddy.name', 'GoDaddy'),
+      logo: '🚀',
+      description: t('integrations.ecommerce.platforms.godaddy.description', 'All-in-one solution for websites, marketing, and online stores'),
+      features: [
+        t('integrations.ecommerce.platforms.godaddy.features.website', 'Website builder'),
+        t('integrations.ecommerce.platforms.godaddy.features.scheduling', 'Appointment scheduling'),
+        t('integrations.ecommerce.platforms.godaddy.features.social', 'Social media tools'),
+        t('integrations.ecommerce.platforms.godaddy.features.security', 'SSL security')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.godaddy.setupTime', '15 minutes'),
+      popularity: t('integrations.ecommerce.platforms.godaddy.popularity', 'Comprehensive')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.hostinger.name', 'Hostinger'),
+      logo: '🏠',
+      description: t('integrations.ecommerce.platforms.hostinger.description', 'Web hosting provider with an integrated website builder and e-commerce features'),
+      features: [
+        t('integrations.ecommerce.platforms.hostinger.features.hosting', 'Reliable hosting'),
+        t('integrations.ecommerce.platforms.hostinger.features.builder', 'AI website builder'),
+        t('integrations.ecommerce.platforms.hostinger.features.ssl', 'Free SSL'),
+        t('integrations.ecommerce.platforms.hostinger.features.support', '24/7 support')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.hostinger.setupTime', '10 minutes'),
+      popularity: t('integrations.ecommerce.platforms.hostinger.popularity', 'Budget-Friendly')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.magento.name', 'Magento'),
+      logo: '🏪',
+      description: t('integrations.ecommerce.platforms.magento.description', 'Enterprise Magento integration for large-scale e-commerce'),
+      features: [
+        t('integrations.ecommerce.platforms.magento.features.multistore', 'Multi-store support'), 
+        t('integrations.ecommerce.platforms.magento.features.orders', 'Advanced orders'), 
+        t('integrations.ecommerce.platforms.magento.features.segments', 'Customer segments'), 
+        t('integrations.ecommerce.platforms.magento.features.catalog', 'Catalog sync')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.magento.setupTime', '15 minutes'),
+      popularity: t('integrations.ecommerce.platforms.magento.popularity', 'Enterprise')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.opencart.name', 'OpenCart'),
+      logo: '🛍️',
+      description: t('integrations.ecommerce.platforms.opencart.description', 'Free open-source e-commerce platform for online stores'),
+      features: [
+        t('integrations.ecommerce.platforms.opencart.features.dashboard', 'Admin dashboard'),
+        t('integrations.ecommerce.platforms.opencart.features.extensions', 'Rich extensions'),
+        t('integrations.ecommerce.platforms.opencart.features.themes', 'Themable'),
+        t('integrations.ecommerce.platforms.opencart.features.multi_store', 'Multi-store functionality')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.opencart.setupTime', '25 minutes'),
+      popularity: t('integrations.ecommerce.platforms.opencart.popularity', 'Flexible')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.prestashop.name', 'PrestaShop'),
+      logo: '🛒',
+      description: t('integrations.ecommerce.platforms.prestashop.description', 'Open-source e-commerce solution for small to large businesses'),
+      features: [
+        t('integrations.ecommerce.platforms.prestashop.features.customizable', 'Highly customizable'),
+        t('integrations.ecommerce.platforms.prestashop.features.modules', 'Thousands of modules'),
+        t('integrations.ecommerce.platforms.prestashop.features.multilingual', 'Multilingual support'),
+        t('integrations.ecommerce.platforms.prestashop.features.analytics', 'Advanced analytics')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.prestashop.setupTime', '30 minutes'),
+      popularity: t('integrations.ecommerce.platforms.prestashop.popularity', 'Open-Source')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.sellfy.name', 'Sellfy'),
+      logo: '📈',
+      description: t('integrations.ecommerce.platforms.sellfy.description', 'E-commerce platform for creators to sell digital products, subscriptions, and physical goods'),
+      features: [
+        t('integrations.ecommerce.platforms.sellfy.features.digital', 'Digital product sales'),
+        t('integrations.ecommerce.platforms.sellfy.features.subscriptions', 'Subscription services'),
+        t('integrations.ecommerce.platforms.sellfy.features.print_on_demand', 'Print-on-demand'),
+        t('integrations.ecommerce.platforms.sellfy.features.marketing', 'Built-in marketing')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.sellfy.setupTime', '5 minutes'),
+      popularity: t('integrations.ecommerce.platforms.sellfy.popularity', 'Creator-Focused')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.shopify.name', 'Shopify'),
+      logo: '🛍️',
+      description: t('integrations.ecommerce.platforms.shopify.description', 'Complete Shopify integration with order management and customer sync'),
+      features: [
+        t('integrations.ecommerce.platforms.shopify.features.orders', 'Order tracking'), 
+        t('integrations.ecommerce.platforms.shopify.features.catalog', 'Product catalog'), 
+        t('integrations.ecommerce.platforms.shopify.features.customers', 'Customer profiles'), 
+        t('integrations.ecommerce.platforms.shopify.features.inventory', 'Inventory sync')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.shopify.setupTime', '5 minutes'),
+      popularity: t('integrations.ecommerce.platforms.shopify.popularity', 'Most Popular')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.square.name', 'Square'),
+      logo: '💳',
+      description: t('integrations.ecommerce.platforms.square.description', 'Point-of-sale and e-commerce solutions for businesses of all sizes'),
+      features: [
+        t('integrations.ecommerce.platforms.square.features.pos', 'Integrated POS'),
+        t('integrations.ecommerce.platforms.square.features.invoicing', 'Invoicing'),
+        t('integrations.ecommerce.platforms.square.features.loyalty', 'Loyalty programs'),
+        t('integrations.ecommerce.platforms.square.features.reporting', 'Sales reporting')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.square.setupTime', '5 minutes'),
+      popularity: t('integrations.ecommerce.platforms.square.popularity', 'Retail')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.squarespace.name', 'Squarespace'),
+      logo: '📐',
+      description: t('integrations.ecommerce.platforms.squarespace.description', 'Website builder known for its beautiful design templates and e-commerce capabilities'),
+      features: [
+        t('integrations.ecommerce.platforms.squarespace.features.design', 'Award-winning design'),
+        t('integrations.ecommerce.platforms.squarespace.features.blogging', 'Blogging tools'),
+        t('integrations.ecommerce.platforms.squarespace.features.portfolio', 'Portfolio options'),
+        t('integrations.ecommerce.platforms.squarespace.features.commerce', 'Full commerce features')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.squarespace.setupTime', '20 minutes'),
+      popularity: t('integrations.ecommerce.platforms.squarespace.popularity', 'Design-Focused')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.weebly.name', 'Weebly'),
+      logo: '🌐',
+      description: t('integrations.ecommerce.platforms.weebly.description', 'Simple drag-and-drop website builder with e-commerce features'),
+      features: [
+        t('integrations.ecommerce.platforms.weebly.features.storefront', 'Customizable storefront'),
+        t('integrations.ecommerce.platforms.weebly.features.marketing', 'Marketing tools'),
+        t('integrations.ecommerce.platforms.weebly.features.seo', 'SEO optimization'),
+        t('integrations.ecommerce.platforms.weebly.features.payments', 'Integrated payments')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.weebly.setupTime', '10 minutes'),
+      popularity: t('integrations.ecommerce.platforms.weebly.popularity', 'User-Friendly')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.wix.name', 'Wix'),
+      logo: '✨',
+      description: t('integrations.ecommerce.platforms.wix.description', 'Cloud-based web development platform for creating HTML5 websites and mobile sites'),
+      features: [
+        t('integrations.ecommerce.platforms.wix.features.templates', 'Designer templates'),
+        t('integrations.ecommerce.platforms.wix.features.apps', 'App market'),
+        t('integrations.ecommerce.platforms.wix.features.mobile', 'Mobile optimized'),
+        t('integrations.ecommerce.platforms.wix.features.analytics', 'Site analytics')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.wix.setupTime', '10 minutes'),
+      popularity: t('integrations.ecommerce.platforms.wix.popularity', 'Versatile')
+    },
+    {
+      name: t('integrations.ecommerce.platforms.woocommerce.name', 'WooCommerce'),
+      logo: '🛒',
+      description: t('integrations.ecommerce.platforms.woocommerce.description', 'WordPress WooCommerce plugin for seamless store integration'),
+      features: [
+        t('integrations.ecommerce.platforms.woocommerce.features.orders', 'Order status'), 
+        t('integrations.ecommerce.platforms.woocommerce.features.products', 'Product support'), 
+        t('integrations.ecommerce.platforms.woocommerce.features.customers', 'Customer history'), 
+        t('integrations.ecommerce.platforms.woocommerce.features.payments', 'Payment tracking')
+      ],
+      setupTime: t('integrations.ecommerce.platforms.woocommerce.setupTime', '8 minutes'),
+      popularity: t('integrations.ecommerce.platforms.woocommerce.popularity', 'WordPress')
     }
   ];
 
@@ -132,12 +249,12 @@ const EcommercePage = () => {
               {t('integrations.ecommerce.subtitle', 'Connect SeaChat with your online store to provide exceptional customer support, increase sales, and reduce cart abandonment.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-500 hover:bg-purple-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('integrations.ecommerce.connectButton', 'Connect Your Store')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('integrations.ecommerce.demoButton', 'View E-commerce Demo')}
-              </button>
+              <a href="https://chat.seasalt.ai/gpt/signup" className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                {t('integrations.ecommerce.hero.button1', 'Connect Your Store')}
+              </a>
+              <a href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/" className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                {t('integrations.ecommerce.hero.button2', 'Schedule E-commerce Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -186,9 +303,9 @@ const EcommercePage = () => {
                   </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105">
+                <a href="https://chat.seasalt.ai/gpt/signup" className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 text-center">
                   {t('integrations.ecommerce.connectPlatform', 'Connect')} {platform.name}
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -288,13 +405,12 @@ const EcommercePage = () => {
             {t('integrations.ecommerce.ctaSubtitle', 'Connect your online store and start providing exceptional customer support that drives sales and loyalty.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('integrations.ecommerce.ctaConnectButton', 'Connect Your Store Now')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-              {t('integrations.ecommerce.ctaGuideButton', 'View Integration Guide')}
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+          <a href="https://chat.seasalt.ai/gpt/signup" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-blue-700 transition duration-300">
+            {t('integrations.ecommerce.cta.button1', 'Connect Your Store Now')}
+          </a>
+          <a href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-blue-700 transition duration-300">
+            {t('integrations.ecommerce.cta.button2', 'Schedule E-commerce Demo')}
+          </a>
           </div>
         </div>
       </section>

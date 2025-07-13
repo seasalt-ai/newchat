@@ -148,12 +148,22 @@ const RealEstatePage = () => {
               {t('solutions.realEstate.subtitle', 'Transform your real estate business with AI-powered customer support that captures leads, coordinates showings, and provides 24/7 client assistance.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('solutions.realEstate.trialButton', 'Start Real Estate Trial')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('solutions.realEstate.demoButton', 'View Real Estate Demo')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
+                {t('solutions.realEstate.trialButton', 'Start Real Estate For Free')}
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                {t('solutions.realEstate.demoButton', 'Schedule Real Estate Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -352,13 +362,23 @@ const RealEstatePage = () => {
             {t('solutions.realEstate.ctaSubtitle', 'Join real estate professionals already using SeaChat to capture more leads, coordinate showings, and provide exceptional client service.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('solutions.realEstate.ctaTrialButton', 'Start Real Estate Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              {t('solutions.realEstate.ctaTrialButton', 'Start Real Estate For Free')}
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
               {t('solutions.realEstate.ctaDemoButton', 'Schedule Real Estate Demo')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

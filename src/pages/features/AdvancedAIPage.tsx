@@ -119,12 +119,22 @@ const AdvancedAIPage = () => {
               {t('features.advancedAI.subtitle', 'Next-generation AI intelligence with memory, context awareness, and advanced reasoning capabilities for truly personalized customer experiences.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-pink-500 hover:bg-pink-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-pink-500 hover:bg-pink-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
                 {t('features.advancedAI.exploreButton', 'Explore Advanced AI')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('features.advancedAI.demoButton', 'Request Demo')}
-              </button>
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                Schedule Demo
+              </a>
             </div>
           </div>
         </div>
@@ -290,13 +300,23 @@ const AdvancedAIPage = () => {
             {t('features.advancedAI.cta.subtitle', 'Ready to transform your customer support with advanced AI that remembers, learns, and adapts? Start your journey with our cutting-edge technology.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('features.advancedAI.cta.trialButton', 'Start Advanced AI Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-              {t('features.advancedAI.cta.demoButton', 'Schedule Technical Demo')}
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              Sign Up For Free
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center"
+            >
+              Schedule Demo
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

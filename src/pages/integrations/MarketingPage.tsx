@@ -1,5 +1,8 @@
 import React from 'react';
+
+import { SiMailchimp, SiHubspot } from 'react-icons/si';
 import { Mail, Target, TrendingUp, Users, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+
 import { useTranslation } from 'react-i18next';
 
 const MarketingPage = () => {
@@ -7,60 +10,32 @@ const MarketingPage = () => {
   
   const platforms = [
     {
-      name: t('integrations.marketing.platforms.mailerlite.name', 'MailerLite'),
+      name: t('integrations.marketing.platforms.activecampaign.name', 'ActiveCampaign'),
+      icon: Zap,
+      color: 'from-indigo-500 to-purple-500',
+      description: t('integrations.marketing.platforms.activecampaign.description', 'Customer experience automation platform'),
+      features: [
+        t('integrations.marketing.platforms.activecampaign.features.automation', 'Marketing automation'), 
+        t('integrations.marketing.platforms.activecampaign.features.crm', 'CRM integration'), 
+        t('integrations.marketing.platforms.activecampaign.features.learning', 'Machine learning'), 
+        t('integrations.marketing.platforms.activecampaign.features.sending', 'Predictive sending')
+      ],
+      setupTime: t('integrations.marketing.platforms.activecampaign.setupTime', '18 minutes'),
+      category: t('integrations.marketing.platforms.activecampaign.category', 'Automation')
+    },
+    {
+      name: t('integrations.marketing.platforms.constantcontact.name', 'Constant Contact'),
       icon: Mail,
-      color: 'from-green-500 to-emerald-500',
-      description: t('integrations.marketing.platforms.mailerlite.description', 'Email marketing automation with customer support integration'),
+      color: 'from-blue-500 to-yellow-400',
+      description: t('integrations.marketing.platforms.constantcontact.description', 'Email marketing and automation for small businesses'),
       features: [
-        t('integrations.marketing.platforms.mailerlite.features.campaigns', 'Email campaigns'), 
-        t('integrations.marketing.platforms.mailerlite.features.automation', 'Automation workflows'), 
-        t('integrations.marketing.platforms.mailerlite.features.subscribers', 'Subscriber management'), 
-        t('integrations.marketing.platforms.mailerlite.features.analytics', 'Analytics')
+        t('integrations.marketing.platforms.constantcontact.features.templates', 'Email templates'),
+        t('integrations.marketing.platforms.constantcontact.features.social', 'Social media tools'),
+        t('integrations.marketing.platforms.constantcontact.features.scheduling', 'Campaign scheduling'),
+        t('integrations.marketing.platforms.constantcontact.features.analytics', 'Analytics dashboard')
       ],
-      setupTime: t('integrations.marketing.platforms.mailerlite.setupTime', '8 minutes'),
-      category: t('integrations.marketing.platforms.mailerlite.category', 'Email Marketing')
-    },
-    {
-      name: t('integrations.marketing.platforms.mailchimp.name', 'Mailchimp'),
-      icon: Mail,
-      color: 'from-yellow-500 to-orange-500',
-      description: t('integrations.marketing.platforms.mailchimp.description', 'Comprehensive email marketing platform with audience insights'),
-      features: [
-        t('integrations.marketing.platforms.mailchimp.features.builder', 'Campaign builder'), 
-        t('integrations.marketing.platforms.mailchimp.features.segmentation', 'Audience segmentation'), 
-        t('integrations.marketing.platforms.mailchimp.features.testing', 'A/B testing'), 
-        t('integrations.marketing.platforms.mailchimp.features.reporting', 'Reporting')
-      ],
-      setupTime: t('integrations.marketing.platforms.mailchimp.setupTime', '10 minutes'),
-      category: t('integrations.marketing.platforms.mailchimp.category', 'Email Marketing')
-    },
-    {
-      name: t('integrations.marketing.platforms.hubspot.name', 'HubSpot Marketing'),
-      icon: Target,
-      color: 'from-orange-500 to-red-500',
-      description: t('integrations.marketing.platforms.hubspot.description', 'Inbound marketing platform with lead nurturing capabilities'),
-      features: [
-        t('integrations.marketing.platforms.hubspot.features.scoring', 'Lead scoring'), 
-        t('integrations.marketing.platforms.hubspot.features.automation', 'Marketing automation'), 
-        t('integrations.marketing.platforms.hubspot.features.landing', 'Landing pages'), 
-        t('integrations.marketing.platforms.hubspot.features.social', 'Social media')
-      ],
-      setupTime: t('integrations.marketing.platforms.hubspot.setupTime', '15 minutes'),
-      category: t('integrations.marketing.platforms.hubspot.category', 'Marketing Hub')
-    },
-    {
-      name: t('integrations.marketing.platforms.klaviyo.name', 'Klaviyo'),
-      icon: TrendingUp,
-      color: 'from-purple-500 to-pink-500',
-      description: t('integrations.marketing.platforms.klaviyo.description', 'E-commerce focused email and SMS marketing platform'),
-      features: [
-        t('integrations.marketing.platforms.klaviyo.features.triggers', 'Behavioral triggers'), 
-        t('integrations.marketing.platforms.klaviyo.features.recommendations', 'Product recommendations'), 
-        t('integrations.marketing.platforms.klaviyo.features.sms', 'SMS campaigns'), 
-        t('integrations.marketing.platforms.klaviyo.features.revenue', 'Revenue tracking')
-      ],
-      setupTime: t('integrations.marketing.platforms.klaviyo.setupTime', '12 minutes'),
-      category: t('integrations.marketing.platforms.klaviyo.category', 'E-commerce')
+      setupTime: t('integrations.marketing.platforms.constantcontact.setupTime', '7 minutes'),
+      category: t('integrations.marketing.platforms.constantcontact.category', 'Email Marketing')
     },
     {
       name: t('integrations.marketing.platforms.convertkit.name', 'ConvertKit'),
@@ -77,18 +52,88 @@ const MarketingPage = () => {
       category: t('integrations.marketing.platforms.convertkit.category', 'Creator Economy')
     },
     {
-      name: t('integrations.marketing.platforms.activecampaign.name', 'ActiveCampaign'),
-      icon: Zap,
-      color: 'from-indigo-500 to-purple-500',
-      description: t('integrations.marketing.platforms.activecampaign.description', 'Customer experience automation platform'),
+      name: t('integrations.marketing.platforms.engagebay.name', 'EngageBay'),
+      icon: Users,
+      color: 'from-pink-500 to-orange-400',
+      description: t('integrations.marketing.platforms.engagebay.description', 'All-in-one marketing, sales, and support CRM'),
       features: [
-        t('integrations.marketing.platforms.activecampaign.features.automation', 'Marketing automation'), 
-        t('integrations.marketing.platforms.activecampaign.features.crm', 'CRM integration'), 
-        t('integrations.marketing.platforms.activecampaign.features.learning', 'Machine learning'), 
-        t('integrations.marketing.platforms.activecampaign.features.sending', 'Predictive sending')
+        t('integrations.marketing.platforms.engagebay.features.email', 'Email marketing'),
+        t('integrations.marketing.platforms.engagebay.features.crm', 'CRM integration'),
+        t('integrations.marketing.platforms.engagebay.features.forms', 'Lead forms & popups'),
+        t('integrations.marketing.platforms.engagebay.features.automation', 'Marketing automation')
       ],
-      setupTime: t('integrations.marketing.platforms.activecampaign.setupTime', '18 minutes'),
-      category: t('integrations.marketing.platforms.activecampaign.category', 'Automation')
+      setupTime: t('integrations.marketing.platforms.engagebay.setupTime', '11 minutes'),
+      category: t('integrations.marketing.platforms.engagebay.category', 'All-in-One')
+    },
+    {
+      name: t('integrations.marketing.platforms.hubspot.name', 'HubSpot Marketing'),
+      icon: SiHubspot,
+      color: 'from-orange-500 to-red-500',
+      description: t('integrations.marketing.platforms.hubspot.description', 'Inbound marketing platform with lead nurturing capabilities'),
+      features: [
+        t('integrations.marketing.platforms.hubspot.features.scoring', 'Lead scoring'), 
+        t('integrations.marketing.platforms.hubspot.features.automation', 'Marketing automation'), 
+        t('integrations.marketing.platforms.hubspot.features.landing', 'Landing pages'), 
+        t('integrations.marketing.platforms.hubspot.features.social', 'Social media')
+      ],
+      setupTime: t('integrations.marketing.platforms.hubspot.setupTime', '15 minutes'),
+      category: t('integrations.marketing.platforms.hubspot.category', 'Marketing Hub')
+    },
+    {
+      name: t('integrations.marketing.platforms.klaviyo.name', 'Klaviyo'),
+      icon: Zap,
+      color: 'from-purple-500 to-pink-500',
+      description: t('integrations.marketing.platforms.klaviyo.description', 'E-commerce focused email and SMS marketing platform'),
+      features: [
+        t('integrations.marketing.platforms.klaviyo.features.triggers', 'Behavioral triggers'), 
+        t('integrations.marketing.platforms.klaviyo.features.recommendations', 'Product recommendations'), 
+        t('integrations.marketing.platforms.klaviyo.features.sms', 'SMS campaigns'), 
+        t('integrations.marketing.platforms.klaviyo.features.revenue', 'Revenue tracking')
+      ],
+      setupTime: t('integrations.marketing.platforms.klaviyo.setupTime', '12 minutes'),
+      category: t('integrations.marketing.platforms.klaviyo.category', 'E-commerce')
+    },
+    {
+      name: t('integrations.marketing.platforms.mailchimp.name', 'Mailchimp'),
+      icon: SiMailchimp,
+      color: 'from-yellow-500 to-orange-500',
+      description: t('integrations.marketing.platforms.mailchimp.description', 'Comprehensive email marketing platform with audience insights'),
+      features: [
+        t('integrations.marketing.platforms.mailchimp.features.builder', 'Campaign builder'), 
+        t('integrations.marketing.platforms.mailchimp.features.segmentation', 'Audience segmentation'), 
+        t('integrations.marketing.platforms.mailchimp.features.testing', 'A/B testing'), 
+        t('integrations.marketing.platforms.mailchimp.features.reporting', 'Reporting')
+      ],
+      setupTime: t('integrations.marketing.platforms.mailchimp.setupTime', '10 minutes'),
+      category: t('integrations.marketing.platforms.mailchimp.category', 'Email Marketing')
+    },
+    {
+      name: t('integrations.marketing.platforms.mailerlite.name', 'MailerLite'),
+      icon: Mail,
+      color: 'from-green-500 to-emerald-500',
+      description: t('integrations.marketing.platforms.mailerlite.description', 'Email marketing automation with customer support integration'),
+      features: [
+        t('integrations.marketing.platforms.mailerlite.features.campaigns', 'Email campaigns'), 
+        t('integrations.marketing.platforms.mailerlite.features.automation', 'Automation workflows'), 
+        t('integrations.marketing.platforms.mailerlite.features.subscribers', 'Subscriber management'), 
+        t('integrations.marketing.platforms.mailerlite.features.analytics', 'Analytics')
+      ],
+      setupTime: t('integrations.marketing.platforms.mailerlite.setupTime', '8 minutes'),
+      category: t('integrations.marketing.platforms.mailerlite.category', 'Email Marketing')
+    },
+    {
+      name: t('integrations.marketing.platforms.omnisend.name', 'Omnisend'),
+      icon: Mail,
+      color: 'from-teal-500 to-green-500',
+      description: t('integrations.marketing.platforms.omnisend.description', 'Omnichannel marketing automation for e-commerce'),
+      features: [
+        t('integrations.marketing.platforms.omnisend.features.email', 'Email & SMS campaigns'),
+        t('integrations.marketing.platforms.omnisend.features.automation', 'Automation workflows'),
+        t('integrations.marketing.platforms.omnisend.features.segmentation', 'Audience segmentation'),
+        t('integrations.marketing.platforms.omnisend.features.reports', 'Advanced reporting')
+      ],
+      setupTime: t('integrations.marketing.platforms.omnisend.setupTime', '10 minutes'),
+      category: t('integrations.marketing.platforms.omnisend.category', 'E-commerce')
     }
   ];
 
@@ -157,12 +202,22 @@ const MarketingPage = () => {
               {t('integrations.marketing.subtitle', 'Connect SeaChat with your marketing tools to turn customer support conversations into powerful marketing opportunities and personalized campaigns.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-orange-500 hover:bg-orange-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-500 hover:bg-orange-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
                 {t('integrations.marketing.connectButton', 'Connect Marketing Tools')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-orange-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('integrations.marketing.demoButton', 'View Marketing Demo')}
-              </button>
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-orange-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
+                {t('integrations.marketing.demoButton', 'Schedule Marketing Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -215,9 +270,14 @@ const MarketingPage = () => {
                     </div>
                   </div>
                   
-                  <button className={`w-full bg-gradient-to-r ${platform.color} hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105`}>
+                  <a
+                    href="https://chat.seasalt.ai/gpt/signup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full bg-gradient-to-r ${platform.color} hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 text-center block`}
+                  >
                     {t('integrations.marketing.connectPlatform', 'Connect')} {platform.name}
-                  </button>
+                  </a>
                 </div>
               );
             })}
@@ -355,13 +415,23 @@ const MarketingPage = () => {
             {t('integrations.marketing.ctaSubtitle', 'Connect your marketing platforms and turn every customer support conversation into a growth opportunity.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
               {t('integrations.marketing.ctaConnectButton', 'Connect Marketing Tools')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            </a>
+            <a
+              href="http://wiki.seasalt.ai/seachat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center"
+            >
               {t('integrations.marketing.ctaGuideButton', 'View Setup Guide')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

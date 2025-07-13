@@ -184,12 +184,22 @@ const TravelPage = () => {
               {t('solutions.travel.subtitle', 'Transform travel experiences with AI-powered customer support that handles bookings, provides 24/7 assistance, and creates memorable journeys for your customers.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-cyan-500 hover:bg-cyan-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('solutions.travel.trialButton', 'Start Travel Trial')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('solutions.travel.demoButton', 'View Travel Demo')}
-              </button>
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-cyan-500 hover:bg-cyan-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+            >
+              {t('solutions.travel.trialButton', 'Start Travel For Free')}
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-cyan-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+            >
+              {t('solutions.travel.demoButton', 'Schedule Travel Demo')}
+            </a>
             </div>
           </div>
         </div>
@@ -409,13 +419,23 @@ const TravelPage = () => {
             {t('solutions.travel.ctaSubtitle', 'Join travel companies already using SeaChat to provide exceptional customer service and streamline booking processes worldwide.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('solutions.travel.ctaTrialButton', 'Start Travel Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              {t('solutions.travel.ctaTrialButton', 'Start Travel For Free')}
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
               {t('solutions.travel.ctaDemoButton', 'Schedule Travel Demo')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

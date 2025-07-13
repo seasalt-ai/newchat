@@ -138,12 +138,22 @@ app.post('/api/seachat/webhook', (req, res) => {
               {t('integrations.api.subtitle', 'Build powerful custom integrations with our comprehensive API. Connect SeaChat to any system or workflow with our developer-friendly tools.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
                 {t('integrations.api.accessButton', 'Get API Access')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+              </a>
+              <a
+                href="https://api.seasalt.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              >
                 {t('integrations.api.docsButton', 'View API Documentation')}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -369,13 +379,23 @@ app.post('/api/seachat/webhook', (req, res) => {
             {t('integrations.api.ctaSubtitle', 'Get API access and start building powerful custom integrations that transform your customer support workflow.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
               {t('integrations.api.ctaAccessButton', 'Get API Access')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            </a>
+            <a
+              href="https://api.seasalt.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center"
+            >
               {t('integrations.api.ctaDocsButton', 'View Documentation')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

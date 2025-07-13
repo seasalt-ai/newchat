@@ -220,9 +220,15 @@ export default function KnowledgeBasePage() {
               <p className="text-gray-600 mb-6">
                 {t('features.knowledgeBase.readySubtitle', 'Build your knowledge base today and transform how your team delivers customer support.')}
               </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                {t('features.knowledgeBase.startButton', 'Start Building')}
-              </button>
+              {/* replaced button with anchor for signup link */}
+                <a
+                  href="https://chat.seasalt.ai/gpt/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+                >
+                  {t('features.knowledgeBase.startButton', 'Start Building')}
+                </a>
             </div>
           </div>
         </div>

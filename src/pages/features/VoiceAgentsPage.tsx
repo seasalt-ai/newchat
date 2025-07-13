@@ -100,13 +100,22 @@ const VoiceAgentsPage = () => {
               {t('features.voiceAgents.subtitle', 'Transform phone support with AI voice agents that sound natural, understand context, and provide instant assistance in multiple languages.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-indigo-500 hover:bg-indigo-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
-                {t('features.voiceAgents.demoButton', 'Try Voice Demo')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-                {t('features.voiceAgents.listenButton', 'Listen to Sample')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-500 hover:bg-indigo-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 text-center"
+              >
+                Sign Up For Free
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+              >
+                Schedule Demo
+              </a>
             </div>
           </div>
         </div>
@@ -261,13 +270,23 @@ const VoiceAgentsPage = () => {
             {t('features.voiceAgents.ctaSubtitle', 'Experience the future of voice customer support with AI agents that sound and feel human.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              {t('features.voiceAgents.ctaTrialButton', 'Start Voice Trial')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
-              {t('features.voiceAgents.ctaDemoButton', 'Schedule Voice Demo')}
+            <a
+              href="https://chat.seasalt.ai/gpt/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
+            >
+              Sign Up For Free
+            </a>
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center text-center"
+            >
+              Schedule Demo
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

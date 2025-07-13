@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, BookOpen } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -83,10 +83,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">S</span>
-            </div>
-            <span className="ml-2 text-xl font-bold text-gray-900">SeaChat</span>
+            <img src="/seachat-logo.png" alt="SeaChat Logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -203,19 +200,34 @@ const Header = () => {
             >
               {t('header.blog')}
             </Link>
+
+            {/* Wiki (standout) */}
+            <a
+              href="http://wiki.seasalt.ai/seachat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center font-semibold text-white bg-gradient-to-r from-blue-500 to-teal-500 px-4 py-2 rounded-lg shadow hover:from-blue-600 hover:to-teal-600 transition-all transform hover:scale-105 border border-blue-400"
+              style={{ marginLeft: '0.5rem' }}
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              Wiki
+            </a>
           </nav>
 
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Language selector */}
             <LanguageSwitcher />
-            
-            <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            {/* Sign In button */}
+            <a
+              href="https://chat.seasalt.ai/gpt/signin"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
               {t('common.signIn')}
-            </button>
-            <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105">
+            </a>
+            <a href="https://chat.seasalt.ai/gpt/signup" className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105">
               {t('common.getStarted')}
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -338,12 +350,27 @@ const Header = () => {
             </div>
             
             <div className="pt-4 border-t border-gray-100">
-              <button className="block w-full text-left text-gray-700 font-medium mb-3">
+              <a
+                href="https://chat.seasalt.ai/gpt/signin"
+                className="block w-full text-left text-gray-700 font-medium mb-3"
+              >
                 {t('common.signIn')}
-              </button>
-              <button className="w-full bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              </a>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                className="w-full block text-center bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
                 {t('common.getStarted')}
-              </button>
+              </a>
+              <a
+                href="http://wiki.seasalt.ai/seachat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center mt-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-teal-500 px-4 py-2 rounded-lg shadow hover:from-blue-600 hover:to-teal-600 transition-all border border-blue-400"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Wiki
+              </a>
             </div>
           </div>
         </div>

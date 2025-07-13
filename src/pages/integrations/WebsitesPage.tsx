@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe, Code, Zap, CheckCircle, ArrowRight, Copy, ExternalLink } from 'lucide-react';
+import { SiWordpress, SiShopify, SiWix, SiSquarespace, SiWebflow } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 
 const WebsitesPage = () => {
@@ -23,7 +24,7 @@ const WebsitesPage = () => {
     {
       name: t('integrations.websites.platforms.wordpress.name', 'WordPress'),
       description: t('integrations.websites.platforms.wordpress.description', 'Native WordPress plugin with advanced customization'),
-      icon: Globe,
+      icon: SiWordpress,
       color: 'from-blue-600 to-purple-600',
       features: [
         t('integrations.websites.platforms.wordpress.features.plugin', 'WordPress plugin'), 
@@ -37,7 +38,7 @@ const WebsitesPage = () => {
     {
       name: t('integrations.websites.platforms.shopify.name', 'Shopify'),
       description: t('integrations.websites.platforms.shopify.description', 'E-commerce optimized with order tracking integration'),
-      icon: Globe,
+      icon: SiShopify,
       color: 'from-green-500 to-teal-600',
       features: [
         t('integrations.websites.platforms.shopify.features.orders', 'Order integration'), 
@@ -51,7 +52,7 @@ const WebsitesPage = () => {
     {
       name: t('integrations.websites.platforms.wix.name', 'Wix'),
       description: t('integrations.websites.platforms.wix.description', 'Drag-and-drop integration for Wix websites'),
-      icon: Globe,
+      icon: SiWix,
       color: 'from-purple-500 to-pink-600',
       features: [
         t('integrations.websites.platforms.wix.features.app', 'Wix app store'), 
@@ -65,7 +66,7 @@ const WebsitesPage = () => {
     {
       name: t('integrations.websites.platforms.squarespace.name', 'Squarespace'),
       description: t('integrations.websites.platforms.squarespace.description', 'Seamless integration with Squarespace design system'),
-      icon: Globe,
+      icon: SiSquarespace,
       color: 'from-orange-500 to-red-600',
       features: [
         t('integrations.websites.platforms.squarespace.features.design', 'Design system match'), 
@@ -75,6 +76,20 @@ const WebsitesPage = () => {
       ],
       setupTime: t('integrations.websites.platforms.squarespace.setupTime', '3 minutes'),
       difficulty: t('integrations.websites.platforms.squarespace.difficulty', 'Medium')
+    },
+    {
+      name: t('integrations.websites.platforms.webflow.name', 'Webflow'),
+      description: t('integrations.websites.platforms.webflow.description', 'Native integration for Webflow CMS and e-commerce'),
+      icon: SiWebflow,
+      color: 'from-blue-400 to-blue-600',
+      features: [
+        t('integrations.websites.platforms.webflow.features.cms', 'CMS integration'), 
+        t('integrations.websites.platforms.webflow.features.ecommerce', 'E-commerce support'), 
+        t('integrations.websites.platforms.webflow.features.design', 'Designer-friendly'), 
+        t('integrations.websites.platforms.webflow.features.custom', 'Custom code injection')
+      ],
+      setupTime: t('integrations.websites.platforms.webflow.setupTime', '2 minutes'),
+      difficulty: t('integrations.websites.platforms.webflow.difficulty', 'Easy')
     }
   ];
 
@@ -133,12 +148,12 @@ const WebsitesPage = () => {
               {t('integrations.websites.subtitle', 'Deploy SeaChat on any website platform in minutes. Universal compatibility with custom styling and responsive design.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+              <a href="https://chat.seasalt.ai/gpt/signup" className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center">
                 {t('integrations.websites.codeButton', 'Get Widget Code')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                {t('integrations.websites.demoButton', 'View Live Demo')}
-              </button>
+              </a>
+              <a href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+                {t('integrations.websites.demoButton', 'Schedule Demo')}
+              </a>
             </div>
           </div>
         </div>
@@ -192,9 +207,9 @@ const WebsitesPage = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105">
+                  <a href="https://chat.seasalt.ai/gpt/signup" className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center">
                     {t('integrations.websites.getPlatformCode', 'Get')} {platform.name} {t('integrations.websites.code', 'Code')}
-                  </button>
+                  </a>
                 </div>
               );
             })}
@@ -322,13 +337,13 @@ const WebsitesPage = () => {
             {t('integrations.websites.ctaSubtitle', 'Get your custom widget code and start providing exceptional customer support in minutes.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <a href="https://chat.seasalt.ai/gpt/signup" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center">
               {t('integrations.websites.ctaCodeButton', 'Get Widget Code Now')}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
+            </a>
+            <a href="https://wiki.seasalt.ai/seachat/" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
               {t('integrations.websites.ctaDocsButton', 'View Integration Docs')}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

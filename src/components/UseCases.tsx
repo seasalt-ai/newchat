@@ -127,11 +127,6 @@ const UseCases = () => {
                     </div>
                   ))}
                 </div>
-
-                <button className="flex items-center text-teal-600 hover:text-teal-700 font-semibold group">
-                  {t('common.readMore')}
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
               </div>
             </div>
           ))}
@@ -145,12 +140,22 @@ const UseCases = () => {
               {t('useCases.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
-                {t('useCases.cta.buttons.viewCases')}
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all">
-                {t('useCases.cta.buttons.startStory')}
-              </button>
+              <a
+                href="https://chat.seasalt.ai/gpt/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-center"
+              >
+                Sign Up For Free
+              </a>
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all text-center"
+              >
+                Book A Demo
+              </a>
             </div>
           </div>
         </div>

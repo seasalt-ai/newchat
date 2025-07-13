@@ -13,7 +13,6 @@ import PricingSection from './components/PricingSection';
 import KnowledgeBase from './components/KnowledgeBase';
 import UseCases from './components/UseCases';
 import Testimonials from './components/Testimonials';
-import BlogSection from './components/BlogSection';
 
 // Feature pages
 import HumanAgentsPage from './pages/features/HumanAgentsPage';
@@ -61,7 +60,6 @@ function HomePage() {
       <KnowledgeBase />
       <UseCases />
       <Testimonials />
-      <BlogSection />
     </div>
   );
 }

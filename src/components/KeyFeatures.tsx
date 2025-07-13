@@ -173,9 +173,9 @@ const KeyFeatures = () => {
               </div>
             </div>
 
-            <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-12 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+            <a href="https://chat.seasalt.ai/gpt/signup" className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-12 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg inline-block">
               {t('keyFeatures.trulyFree.startButton')}
-            </button>
+            </a>
           </div>
         </div>
 
